@@ -8,7 +8,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:adora_package/main.dart';
+import 'package:adora_package/splash.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
