@@ -16,7 +16,7 @@ class LoginPage extends StatelessWidget {
               flex: 3,
               child: Container(
                 width: double.infinity,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   gradient: LinearGradient(
                     colors: [Color(0xFF0B243A), Color(0xFF0B1121)],
                     begin: Alignment.topCenter,
@@ -26,7 +26,7 @@ class LoginPage extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.centerLeft,
                   child: Padding(
-                    padding: EdgeInsets.only(left: 16.0),
+                    padding: const EdgeInsets.only(left: 16.0),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,8 +41,8 @@ class LoginPage extends StatelessWidget {
                               width: 80,
                               height: 80,
                             ),
-                            SizedBox(height: 16.0),
-                            Text(
+                            const SizedBox(height: 16.0),
+                            const Text(
                               'Welcome',
                               style: TextStyle(
                                 color: Colors.white,
@@ -50,8 +50,8 @@ class LoginPage extends StatelessWidget {
                                 fontFamily: 'Poppins',
                               ),
                             ),
-                            SizedBox(height: 5),
-                            Text(
+                            const SizedBox(height: 5),
+                            const Text(
                               'Sign In to start a new experience',
                               style: TextStyle(
                                 color: Colors.white,
@@ -73,12 +73,12 @@ class LoginPage extends StatelessWidget {
               flex: 7,
               child: Container(
                 width: double.infinity,
-                color: Color(0xFF1E293B),
+                color: const Color(0xFF1E293B),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.fromLTRB(16.0, 32.0, 16.0, 16.0),
                       child: Text(
                         'Sign In',
@@ -90,53 +90,59 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.all(16.0),
                       child: TextField(
-                        style: TextStyle(
+                        style: const TextStyle(
                             color: Color(0xFF5F6A7C), fontFamily: 'Poppins'),
                         decoration: InputDecoration(
                           hintText: 'Username',
-                          hintStyle: TextStyle(color: Color(0xFF5F6A7C)),
+                          hintStyle: const TextStyle(color: Color(0xFF5F6A7C)),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5.0),
                             borderSide: BorderSide.none,
                           ),
                           filled: true,
-                          fillColor: Color(0xFF2C3749),
-                          contentPadding: EdgeInsets.symmetric(
+                          fillColor: const Color(0xFF2C3749),
+                          contentPadding: const EdgeInsets.symmetric(
                               vertical: 10.0, horizontal: 16.0),
                         ),
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.all(16.0),
                       child: TextField(
-                        style: TextStyle(
+                        style: const TextStyle(
                             color: Color(0xFF5F6A7C), fontFamily: 'Poppins'),
                         decoration: InputDecoration(
                           hintText: 'Password',
-                          hintStyle: TextStyle(color: Color(0xFF5F6A7C)),
+                          hintStyle: const TextStyle(color: Color(0xFF5F6A7C)),
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(5.0),
                             borderSide: BorderSide.none,
                           ),
                           filled: true,
-                          fillColor: Color(0xFF2C3749),
-                          contentPadding: EdgeInsets.symmetric(
+                          fillColor: const Color(0xFF2C3749),
+                          contentPadding: const EdgeInsets.symmetric(
                               vertical: 10.0, horizontal: 16.0),
                         ),
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 16.0),
+                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
                       child: SizedBox(
                         width: double.infinity,
                         height: 45.0,
                         child: ElevatedButton(
                           onPressed: () {
-                            // TODO: Handle button press
+                            Navigator.pushNamed(context, '/home');
                           },
-                          child: Text(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color(0xFF0EA5E9),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(5.0),
+                            ),
+                          ),
+                          child: const Text(
                             'Sign In',
                             style: TextStyle(
                               color: Colors.white,
@@ -144,16 +150,10 @@ class LoginPage extends StatelessWidget {
                               fontFamily: 'Poppins',
                             ),
                           ),
-                          style: ElevatedButton.styleFrom(
-                            primary: Color(0xFF0EA5E9),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(5.0),
-                            ),
-                          ),
                         ),
                       ),
                     ),
-                    Padding(
+                    const Padding(
                       padding: EdgeInsets.symmetric(
                           horizontal: 16.0, vertical: 12.0),
                       child: Row(
@@ -193,7 +193,7 @@ class LoginPage extends StatelessWidget {
                             width: 50,
                             height: 50,
                             decoration: BoxDecoration(
-                              color: Color(0xFF2C3749),
+                              color: const Color(0xFF2C3749),
                               borderRadius: BorderRadius.circular(5),
                             ),
                             child: Image.asset(
@@ -206,7 +206,7 @@ class LoginPage extends StatelessWidget {
                             width: 50,
                             height: 50,
                             decoration: BoxDecoration(
-                              color: Color(0xFF2C3749),
+                              color: const Color(0xFF2C3749),
                               borderRadius: BorderRadius.circular(5),
                             ),
                             child: Image.asset(
